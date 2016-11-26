@@ -38,6 +38,23 @@ extension JavaComparable
 
 
 
+/*	Replacing 'synchronized'
+
+	-	Copy the follwing function into a file within your app, to get synchronized statements to build until you have time to replace them with more efficient equivalents - the deprecated warning is there to remind you to do this. The reason for copying the function is to allow the compiler the possibility of inlining block; if it cannot do this (as would be the case if defined in an external framework such as this) then a big time penalty is incurred making heap allocations for any the variables that are captured by the block from the enclosing scopes. If this is avoided by inlining, there can still be a penalty if a return value is captured prior to escaping the block. Hence this approach is non-optimal.
+	-	For a comprehensive discussion, see https://www.cocoawithlove.com/blog/2016/06/02/threads-and-mutexes.html , and make use of the efficient implementations in CwlMutex in https://github.com/mattgallagher/CwlUtils .
+
+@available(*, deprecated, message: "consider more optimal alternatives")
+public func synchronized(_ obj: AnyObject!, _ block: () -> ())
+{
+	objc_sync_enter(obj)
+	block()
+	objc_sync_exit(obj)
+}
+
+*/
+
+
+
 open class Log
 {
 	public static var logger = Log()
