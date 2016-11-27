@@ -55,3 +55,12 @@ public func synchronized(_ obj: AnyObject!, _ block: () -> ())
 
 
 
+/// This function is for use as a temporary runtime check to catch places where a an abstract function has not been overriden. This replaces the compiletime check available in Java but not supported in Swift 3. For all abstract function declarations, add a simple body with a call to this function, pending class refcatoring into protocols and base classes. A return statement in the block is not necessary as this function never returns.
+public func abstract(line: Int = #line, file: String = #file) -> Never
+{
+	var msg = "Fatal: call to abstract function at \(file) : \(line)\nCall stack:"
+	msg = Thread.callStackSymbols.dropFirst().reduce(msg) { $0 + "\n" + $1 }
+	fatalError(msg)
+}
+
+
