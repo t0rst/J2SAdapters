@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AE3FA80F1DE044280003EFB4 /* J2SAdapters.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3FA80D1DE044280003EFB4 /* J2SAdapters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE3FA8171DE1DB000003EFB4 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FA8161DE1DB000003EFB4 /* Lang.swift */; };
+		AEBBEBCB1DEAF269005525DE /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBEBCA1DEAF269005525DE /* Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		AE3FA80D1DE044280003EFB4 /* J2SAdapters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = J2SAdapters.h; sourceTree = "<group>"; };
 		AE3FA80E1DE044280003EFB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE3FA8161DE1DB000003EFB4 /* Lang.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
+		AEBBEBCA1DEAF269005525DE /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				AE3FA80D1DE044280003EFB4 /* J2SAdapters.h */,
 				AE3FA80E1DE044280003EFB4 /* Info.plist */,
 				AE3FA8161DE1DB000003EFB4 /* Lang.swift */,
+				AEBBEBCA1DEAF269005525DE /* Util.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3FA8171DE1DB000003EFB4 /* Lang.swift in Sources */,
+				AEBBEBCB1DEAF269005525DE /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
